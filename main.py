@@ -2,13 +2,12 @@ from time import sleep
 import requests
 class General:
   def printt(string, speed):
-    if speed <= 80:
+    if speed <= 50:
       delay = 100 - speed
-      print(delay)
-      delay = delay // 20
+      delay = delay / 100
       print(delay)
     else:
-      raise ValueError(f"maximum speed is 80, you put {speed}, which resulted in a delay of {(100 - speed) // 20}s")
+      raise ValueError(f"maximum speed is 50, you put {speed}, which resulted in a delay of {(100 - speed) / 100}s")
     for i in str(string):
       print(i, end="", flush = True)
       sleep(delay)
