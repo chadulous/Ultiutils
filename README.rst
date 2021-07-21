@@ -3,8 +3,8 @@
 General
 ===============
 printt: func
-  prints out a text at the set speed<br/>
-  eg.|br|
+  prints out a text at the set speed  
+  eg.  
   H<br/>
   He<br/>
   Hel<br/>
