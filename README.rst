@@ -1,9 +1,10 @@
+.. |br| raw:: html
 ===============
 General
 ===============
 printt: func
   prints out a text at the set speed<br/>
-  eg.<br/>
+  eg.|br|
   H<br/>
   He<br/>
   Hel<br/>
