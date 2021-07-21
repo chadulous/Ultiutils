@@ -2,17 +2,17 @@
 General
 ===============
 printt: func
-  prints out a text at the set speed
-  eg.
-  H
-  He
-  Hel
-  Hell
-  Hello
-  Hello 
-  Hello W
-  Hello Wo
-  Hello Wor
-  Hello Worl
-  Hello World
-  Hello World!
+  prints out a text at the set speed<br/>
+  eg.<br/>
+  H<br/>
+  He<br/>
+  Hel<br/>
+  Hell<br/>
+  Hello<br/>
+  Hello <br/>
+  Hello W<br/>
+  Hello Wo<br/>
+  Hello Wor<br/>
+  Hello Worl<br/>
+  Hello World<br/>
+  Hello World!<br/>
