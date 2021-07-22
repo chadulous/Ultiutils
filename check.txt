@@ -1,0 +1,2 @@
+Checking dist/ultiutils-22.7.2021-py3-none-any.whl: PASSED
+Checking dist/ultiutils-22.7.2021.tar.gz: PASSED
