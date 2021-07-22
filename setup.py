@@ -1,23 +1,18 @@
 import pathlib
 from setuptools import setup
-from datetime import date
 import os
 import requests
-tdate = date.today()
-first = tdate.day
-second = tdate.month
-third = tdate.year
-os.system('rm dist/* && rm build/*')
+import random
+os.system('rm dist/* && rmdir build/* && rmdir build/')
 # The directory containing this file
 HERE = pathlib.Path(__file__).parent
-
 # The text of the README file
 README = (HERE / "README.md").read_text()
 
 # This call to setup() does all the work
 setup(
     name="ultiutils",
-    version=f"{first}.{second}.{third}",
+    version='1.0.2',
     description="utilites module to make coding in python just wayyy faster",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -37,5 +32,4 @@ setup(
 os.system('twine check dist/* > check.txt')
 check = open('check.txt', 'r').read()
 if check.count('PASSED') == 2:
-  os.system('twine upload dist/*')
-  check.write()
+  os.system('twine upload --disable-progress-bar  --skip-existing --non-interactive dist/*')
