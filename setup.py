@@ -3,8 +3,21 @@ from setuptools import setup
 import os
 import requests
 import random
-os.system('rm dist/* && rmdir build/* && rmdir build/')
+os.system('rm dist/* && rmdir build/*')
 # The directory containing this file
+ver = open('ver.txt', 'r').read()
+ver = ver.split('.')
+ver.reverse()
+print(int(ver[0]) >= 10)
+print(int(ver[1]) >= 10)
+ver[0] = str(int(ver[0]) + 1)
+if int(ver[0]) >= 10:
+  ver[0] = str(0)
+  ver[1] = str(int(ver[1]) + 1)
+if int(ver[1]) >= 10:
+  ver[1] = str(0)
+  ver[2] = str(int(ver[2]) + 1)
+ver.reverse()
 HERE = pathlib.Path(__file__).parent
 # The text of the README file
 README = (HERE / "README.md").read_text()
@@ -12,7 +25,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="ultiutils",
-    version='1.0.2',
+    version=f'{".".join(ver)}',
     description="utilites module to make coding in python just wayyy faster",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -33,3 +46,4 @@ os.system('twine check dist/* > check.txt')
 check = open('check.txt', 'r').read()
 if check.count('PASSED') == 2:
   os.system('twine upload --disable-progress-bar  --skip-existing --non-interactive dist/*')
+open('ver.txt', 'w').write(f'{".".join(ver)}')
